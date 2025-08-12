@@ -1,0 +1,150 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Body and app */
+html, body, .stApp {
+    background: #f4f5f7;
+    min-height: 100vh;
+    color: #111827;
+}
+
+/* Main container */
+.block-container {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+/* Title */
+h1 {
+    color: #111827;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Form container */
+.stForm {
+    background: #f9fafb;
+    padding: 0.8rem;
+    border-radius: 4px;
+}
+
+/* Unified input style fix for ALL input types */
+input[type="text"],
+input[type="number"],
+textarea,
+.stTextInput input,
+.stNumberInput input,
+.stNumberInput > div > div > input,
+.stSelectbox div[role="combobox"] {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 5px !important;
+    padding: 8px !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+    height: 38px !important;
+}
+
+/* Placeholder text */
+.stTextInput input::placeholder,
+.stNumberInput input::placeholder {
+    color: #9ca3af !important;
+}
+
+/* Ensure values are visible even after typing */
+input:not(:placeholder-shown),
+.stTextInput input:not(:placeholder-shown),
+.stNumberInput input:not(:placeholder-shown) {
+    color: #111827 !important;
+}
+
+/* Focus styles */
+input:focus,
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stSelectbox div[role="combobox"]:focus-within {
+    border-color: #3b82f6 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Button */
+div.stButton > button {
+    height: 38px;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: #3b82f6;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+div.stButton > button:hover {
+    background: #2563eb;
+}
+
+/* Prediction output boxes */
+.prediction-box {
+    padding: 0.6rem;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+}
+
+.prediction-box.approved {
+    color: #16a34a;
+    border-color: #16a34a;
+}
+
+.prediction-box.rejected {
+    color: #dc2626;
+    border-color: #dc2626;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .block-container {
+        margin: 0.5rem;
+        padding: 0.8rem;
+    }
+    div.stButton > button {
+        width: 100%;
+    }
+}
+
+/* Hide Streamlit default footer/menu/header */
+#MainMenu, footer, header {
+    display: none;
+}
+
+/* Enhancement styles */
+/* Add subtle hover effects */
+input:hover {
+    border-color: #9ca3af !important;
+}
+
+/* Slightly more padding for better touch targets */
+input[type="text"],
+input[type="number"] {
+    padding: 10px !important;
+}
+
+/* Add transition for smoother interactions */
+input, button {
+    transition: all 0.2s ease;
+}
